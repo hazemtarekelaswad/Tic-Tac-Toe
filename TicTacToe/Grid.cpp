@@ -88,3 +88,29 @@ char Grid::SelectCell() {
 	std::cin >> selectedCell;
 	return selectedCell;
 }
+
+int Grid::GetWinner() {
+	for (int i = 0; i < GRID_SIZE; ++i) {
+		if (cell[i][0] == cell[i][1] && cell[i][1] == cell[i][2])
+			return m_turn;
+	}
+	if (cell[0][0] == cell[1][1] && cell[1][1] == cell[2][2])
+		return m_turn;
+
+	if (cell[0][2] == cell[1][1] && cell[1][1] == cell[2][0])
+		return m_turn;
+
+	if (IsFull())
+		return -1;
+	return -2;
+}
+
+bool Grid::IsFull() const {
+	for (int i = 0; i < GRID_SIZE; ++i) {
+		for (int j = 0; j < GRID_SIZE; ++j) {
+			if (cell[i][j] >= '1' && cell[i][j] <= '9')
+				return false;
+		}
+	}
+	return true;
+}

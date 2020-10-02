@@ -29,5 +29,7 @@ public:
 	void DrawGrid(char selectedCell);
 	void UpdateGrid(char selectedCell = '0');
 	char SelectCell();
+	int GetWinner();
+	bool IsFull() const;
 };
 
