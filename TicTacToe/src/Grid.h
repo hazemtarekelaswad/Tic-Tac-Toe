@@ -29,7 +29,7 @@ public:
 	void DrawGrid(int selectedCell);		// Draws the grid and takes the selected cell as a parameter to replace then chosen number with a symbol
 	void UpdateGrid(int selectedCell = 0);	// Updates the Grid with the chosen numbers
 	
-	int SelectCell() const;						// Asks players to select number from the grid
-	GameStatus GetGameStatus();				
-};
+	int SelectCell() const;					// Asks players to select number from the grid
+	GameStatus GetGameStatus();				// Returns if the game ends as draw or winning or still proceeded
+};	
 

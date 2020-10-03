@@ -14,7 +14,7 @@ Grid::Grid(const std::string& title) : m_title(title), m_turn(0) {
 	// Initilize default name to "Player 1" and "Player 2"
 	// Initilize default symbols to "X" and "O"
 	for (int i = 0; i < NUMS_OF_PLAYERS; ++i) {
-		m_player[i].name = "Player " + (i + 1);
+		m_player[i].name = "Player ";
 		m_player[i].symbol = 'X' - i * 9;
 	}
 }
@@ -95,6 +95,7 @@ void Grid::DrawGrid(int selectedCell) {
 		}
 		std::cout << "------------------\n";
 	}
+	std::cout << '\n';
 }
 
 void Grid::UpdateGrid(int selectedCell) {
