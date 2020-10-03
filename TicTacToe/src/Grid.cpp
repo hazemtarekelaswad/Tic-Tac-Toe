@@ -1,8 +1,8 @@
-#include "Grid.h"
-#include "constants.h"
 
 #include <iostream>
 #include <string>
+#include "Constants.h"
+#include "Grid.h"
 
 Grid::Grid(const std::string& title) : m_title(title), m_turn(0) {
 	char cellNums = '1';

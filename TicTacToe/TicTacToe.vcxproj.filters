@@ -26,7 +26,7 @@
     <ClInclude Include="Grid.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="constants.h">
+    <ClInclude Include="Constants.h">
       <Filter>Source Files</Filter>
     </ClInclude>
   </ItemGroup>

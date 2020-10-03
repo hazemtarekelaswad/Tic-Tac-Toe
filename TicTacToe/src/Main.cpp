@@ -1,7 +1,6 @@
 #include <iostream>
 #include <string>
-
-#include "constants.h"
+#include "Constants.h"
 #include "Grid.h"
 
 int main() {

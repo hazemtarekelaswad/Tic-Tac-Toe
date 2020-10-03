@@ -1,15 +1,12 @@
 #pragma once
+
 #include <iostream>
 #include <string>
-#include "constants.h"
+#include "Constants.h"
 
 struct Player {
 	std::string name;
 	char symbol;
-
-	void Select(int selectedCell) {
-		
-	}
 };
 
 class Grid {
@@ -23,6 +20,7 @@ private:
 
 public:
 	Grid(const std::string& title);
+
 	void PrintTitle() const;
 	void ReadPlayersInfo();
 	void PrintPlayersInfo() const;
