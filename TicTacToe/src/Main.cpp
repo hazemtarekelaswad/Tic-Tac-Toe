@@ -9,15 +9,14 @@ int main() {
 	game.ReadPlayersInfo();
 	game.UpdateGrid();
 	
-	int winner;
 	do {
 		game.UpdateGrid(game.SelectCell());
-		winner = game.GetWinner();
-	} while (winner == -2);
+		Status = game.GetGameStatus();
+	} while (Status == GameStatus::STILL_PLAYING);
 
-	if (winner == -1)
+	if (Status == GameStatus::DRAW)
 		std::cout << "DRAW\n";
-	else if (winner == 0)
+	else if (Status == GameStatus::PLAYER1)
 		std::cout << "Player 1 Wins\n";
 	else
 		std::cout << "Player 2 Wins \n";
