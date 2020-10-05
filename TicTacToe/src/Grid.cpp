@@ -34,19 +34,28 @@ void Grid::PrintTitle() const{
 }
 
 void Grid::ReadPlayersInfo() {
+
 	for (int i = 0; i < NUMS_OF_PLAYERS; ++i) {
 		std::cout << "Player " << i + 1 << " Name: ";
 		std::cin >> m_player[i].name;
 		std::cout << "Symbol: ";
 		std::cin >> m_player[i].symbol;
 
+		// Assures the chosen symbol is a letter not a number
+		while (m_player[i].symbol >= '0' && m_player[i].symbol <= '9') {
+			std::cout << "Please, choose a letter symbol: ";
+			std::cin >> m_player[i].symbol;
+		}
+
 		// Assures that Player 2 symbol is different from Player 1's
 		while (i == NUMS_OF_PLAYERS - 1 && m_player[i].symbol == m_player[i - 1].symbol) {
 			std::cout << "Please, choose another symbol: ";
 			std::cin >> m_player[i].symbol;
 		}
+
 		std::cout << '\n';
 	}
+
 }
 
 void Grid::PrintPlayersInfo() const {
@@ -109,6 +118,14 @@ int Grid::SelectCell() const {
 	std::cout << m_player[m_turn].name << " | Choose a Number: ";
 	int selectedCell;
 	std::cin >> selectedCell;
+
+	// Checks for valid inputs, numbers from 1 to 9
+	while (std::cin.fail()) {
+		std::cout << m_player[m_turn].name << " | Choose a Number not a letter: ";
+		std::cin.clear();
+		std::cin.ignore(10000, '\n');
+		std::cin >> selectedCell;
+	}
 	return selectedCell;
 }
 

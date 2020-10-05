@@ -8,6 +8,7 @@ int main() {
 	Game game("Tic - Tac - Toe");
 	game.SetUp();
 	game.PrintResult(game.Start());
+	system("pause");
 
 	return 0;
 }

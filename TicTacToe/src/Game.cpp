@@ -24,15 +24,15 @@ GameStatus Game::Start() {
 void Game::PrintResult(const GameStatus& status) const {
 	switch (status) {
 	case GameStatus::PLAYER1:
-		std::cout << "PLAYER 1 WINS :D \n";
+		std::cout << "PLAYER 1 WINS :D \n\n";
 		break;
 
 	case GameStatus::PLAYER2:
-		std::cout << "PLAYER 2 WINS :D \n";
+		std::cout << "PLAYER 2 WINS :D \n\n";
 		break;
 
 	case GameStatus::DRAW:
-		std::cout << "DRAW :( \n";
+		std::cout << "DRAW :( \n\n";
 		break;
 	}
 }
