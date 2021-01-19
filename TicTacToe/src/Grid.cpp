@@ -1,3 +1,4 @@
+#include <cassert>
 #include <iostream>
 #include <string>
 #include "Constants.h"
@@ -17,6 +18,11 @@ Grid::Grid(const std::string& title) : m_title(title), m_turn(0) {
 		m_player[i].name = "Player ";
 		m_player[i].symbol = 'X' - i * 9;
 	}
+}
+
+Player Grid::GetPlayer(int index) const {
+	assert(index <= NUMS_OF_PLAYERS - 1 && index >= 0);
+	return m_player[index];
 }
 
 void Grid::PrintTitle() const{

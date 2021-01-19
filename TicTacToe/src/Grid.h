@@ -22,6 +22,8 @@ private:
 public:
 	Grid(const std::string& title);			// Constructor the take Game title as a parameter
 
+	Player GetPlayer(int index) const;		// Returns a player given its index
+
 	void PrintTitle() const;
 	void ReadPlayersInfo();					// Asks players to enter their names and their chosen symbols
 	void PrintPlayersInfo() const;			// Prints players' names and symbols in specific format
