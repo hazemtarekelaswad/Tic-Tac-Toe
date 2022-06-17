@@ -25,3 +25,9 @@ You can start playing by running the following command
 ```
 
 *Or, you can use VS code or Visual Studio for quick build experience.*
+
+## Screenshots
+![main_menue](https://github.com/hazemtarekelaswad/Tic-Tac-Toe/blob/master/screenshots/1.png?raw=true)
+![game_play](https://github.com/hazemtarekelaswad/Tic-Tac-Toe/blob/master/screenshots/2.png?raw=true)
+![game_play2](https://github.com/hazemtarekelaswad/Tic-Tac-Toe/blob/master/screenshots/3.png?raw=true)
+![winner](https://github.com/hazemtarekelaswad/Tic-Tac-Toe/blob/master/screenshots/4.png?raw=true)
